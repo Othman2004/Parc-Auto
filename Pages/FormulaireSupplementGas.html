@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Style/formsGas.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="form-Gas">
+      <a href="/Pages/SupplementGasoil.html" class="retoure"><img src="/Assets/Arrow 4.png" alt=""></a>
+        <form>
+          <div class="user-box">
+            <input type="text" name="" required="">
+            <label>Titre</label>
+          </div>
+          <div class="user-box">
+            <input type="text" name="" required="">
+            <label>Description</label>
+          </div>
+          <div class="input-file-container">  
+            <p style="padding: 0px; margin: 0px 0px 20px;">Image</p>
+            <input class="input-file" id="my-file" type="file">
+            <label tabindex="0" for="my-file" class="input-file-trigger">Choisir image...</label>
+          </div>
+          <p class="file-return"></p>
+          <div class="input_audio" style="margin-bottom: 25px;">
+            <label>Audio</label>
+          </div>
+          <button class="btn_valider">Valider</button>
+        </form>
+    </div>
+</body>
+
+  <script>
+    document.querySelector("html").classList.add('js');
+
+    var fileInput = document.querySelector( ".input-file" ),  
+    button = document.querySelector( ".input-file-trigger" ),
+    the_return = document.querySelector(".file-return");
+      
+    button.addEventListener( "keydown", function( event ) {  
+      if ( event.keyCode == 13 || event.keyCode == 32 ) {  
+        fileInput.focus();  
+      }  
+    });
+    button.addEventListener( "click", function( event ) {
+      fileInput.focus();
+      return false;
+    });  
+    fileInput.addEventListener( "change", function( event ) {  
+      the_return.innerHTML = this.value;  
+    });  
+  </script>
+
+</html>

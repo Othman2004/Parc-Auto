@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.motif {
+    width: 500px;
+    height: 600px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 15%;
+    left: 23%;
+}
+
+.retoure {
+    position: relative;
+    top: 30px;
+    left: 23%;
+}
+
+.motif .action  {
+    width: 90px;
+    padding: 5px;
+    color: #fff;
+    background-color: rgb(38, 0, 255);
+    text-align: center;
+    transform: rotate(-30deg);
+    position: absolute;
+    left: -20px;
+  }
+
+.motif div {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.motif .sous-titre {
+    height: 70px;
+    padding: 25px 0px;
+}
+
+.motif .titre {
+    height: 70px;
+    padding: 25px 0px;
+}
+
+.motif .description {
+    height: 130px;
+    padding: 10px 0px;
+}
+
+.motif .container-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 138px;
+    padding: 10px 0px;
+}
+
+.container-images img {
+    width: 100px;
+    height: 100px;
+    transition: .2s linear;
+}
+
+.container-images img:hover {
+    transform: scale(1.1);
+}
+
+.popup-image {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .9);
+    z-index: 100;
+    display: none;
+}
+
+.popup-image span {
+    position: absolute;
+    top: 0; right: 10px;
+    font-size: 60px;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.popup-image img {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 700px;
+    height: 700px;
+    transform: translate(-50%, -50%);
+    border: 5px solid #fff;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.motif .audio {
+    height: 70px;
+    padding: 10px 0px;
+}
+
+.motif .reponse {
+    height: 120px;
+    padding: 10px 0px;
+}
+
+@media only screen and (max-width: 600px) {
+    * {
+        font-size: 16px;
+    }
+
+    .motif {
+        width: 330px;
+        position: absolute;
+        left: 8%;
+    }
+
+    .container-images img {
+        width: 85px;
+        height: 85px;
+    }
+
+    .popup-image img {
+        width: 70%;
+        height: 50%;
+    }
+
+    .retoure {
+        position: relative;
+        left: 30px;
+      }
+}
+
+@media only screen and (max-width: 380px) {
+    .motif {
+        width: 300px;
+        position: relative;
+        top: 60px;
+        left: 25px;
+    }
+    .retoure {
+        position: relative;
+        left: 25px;
+      }
+}

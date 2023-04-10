@@ -1,0 +1,128 @@
+.form-entretien {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    /* box-shadow: 0 15px 25px rgba(0,0,0,.6); */
+    border-radius: 10px;
+  }
+  
+  .form-entretien .retoure {
+    position: relative;
+    bottom: 170px;
+  }
+  
+  .form-entretien .user-box {
+    position: relative;
+  }
+  
+  .form-entretien .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 25px;
+    border: none;
+    border-bottom: 1px solid #5936B4;
+    outline: none;
+    background: transparent;
+  }
+  .form-entretien .user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #000000;
+    pointer-events: none;
+    transition: .5s;
+  }
+  
+  .form-entretien .user-box input:focus ~ label,
+  .form-entretien .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #5936B4;
+    font-size: 12px;
+  }
+  
+  .form-entretien .btn_valider {
+      width: 100%;
+      padding: 14px 30px;
+      color: white;
+      background-color: #5936B4;
+      outline: 0;
+      border: 0;
+      border-radius: 4px;
+  }
+  
+  .form-entretien .btn_valider:hover {
+      color: #5936B4;
+      background-color: #fff;
+      border: 1px solid #5936B4;
+  }
+                                   /* Input file */
+  .input-file-container {
+      position: relative;
+      width: 225px;
+  } 
+  .js .input-file-trigger {
+      display: block;
+      padding: 14px 30px;
+      border-radius: 4px;
+      background: #CFCCCC;
+      color: #5936B4;
+      font-size: 16px;
+      transition: all .4s;
+      cursor: pointer;
+      margin-bottom: 25px;
+  }
+  .js .input-file {
+      position: absolute;
+      top: 0; 
+      left: 0;
+      width: 225px;
+      opacity: 0;
+      padding: 14px 0;
+      cursor: pointer;
+  }
+  .js .input-file:hover + .input-file-trigger,
+  .js .input-file:focus + .input-file-trigger,
+  .js .input-file-trigger:hover,
+  .js .input-file-trigger:focus {
+      background: #5936B4;
+      color: #CFCCCC;
+  }
+  
+  .file-return {
+      margin: 0;
+  }
+  .file-return:not(:empty) {
+      margin: 1em 0;
+  }
+  .js .file-return {
+      font-style: italic;
+      font-size: .9em;
+      font-weight: bold;
+  }
+  .js .file-return:not(:empty):before {
+      content: "Selected file: ";
+      font-style: normal;
+      font-weight: normal;
+  }
+  
+  @media only screen and (max-width: 380px) {
+      .form-entretien {
+        position: absolute;
+        top: 45%;
+        left: 48%;
+        width: 330px;
+      }
+      .form-entretien .retoure {
+        position: relative;
+        bottom: 80px;
+      }
+  }

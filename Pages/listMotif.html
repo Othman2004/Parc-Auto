@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Style/motif.css">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/Pages/EntretienRegulier.html" class="retoure"><img src="/Assets/Arrow 4.png" alt=""></a>
+    <div class="motif">
+        <h3 class="action"> valider </h3>
+        
+        <div class="sous-titre">
+            <p>Titre - sous-titre</p>
+        </div>
+        <div class="titre">
+            <P>Titre</P>
+        </div>
+        <div class="description">
+            <p>Description</p>
+        </div>
+        <div class="container-images">
+            <img class="image" src="/Assets/pexels-vova-kras-4324231.jpg" width="75" height="75">
+            <img class="image" src="/Assets/pexels-vova-kras-4324231.jpg" width="75" height="75">
+            <img class="image" src="/Assets/pexels-vova-kras-4324231.jpg" width="75" height="75">
+        </div>
+        <div class="popup-image">
+            <span>&times;</span>
+            <img src="/Assets/pexels-vova-kras-4324231.jpg" width="75" height="75">
+        </div>
+        <div class="audio">
+            <audio controls style="height: 43px;">
+                <source src="#" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="reponse">
+            <p>Reponse</p>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.container-images img').forEach(image =>{
+           image.onclick = () => {
+            document.querySelector('.popup-image').style.display = 'block';
+            document.querySelector('.popup-image img').src = image.getAttribute('src');
+           }
+        });
+        document.querySelector('.popup-image span').onclick = () => {
+            document.querySelector('.popup-image').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
